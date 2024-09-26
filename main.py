@@ -20,9 +20,8 @@ template = """
     A continuación figura el borrador del texto, el tono y el dialecto:
     DRAFT: {draft}
     TONE: {tone}
-    DIALECT: {dialect}
 
-    YOUR {dialect} RESPONSE:
+    YOUR {tone} RESPONSE:
 """
 
 #PromptTemplate definición de variables
@@ -99,7 +98,6 @@ if draft_input:
 
     prompt_with_draft = prompt.format(
         tone=option_tone, 
-        dialect=option_dialect, 
         draft=draft_input
     )
 
